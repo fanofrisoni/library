@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>the Library of u</h1>
+  </header>
+  <main>
+    <a href="#" class="button" id="addbutton">
+      <h2>+ Add New Book</h2>
+    </a>
+    <dialog id="modal">
+      <div class="modalgrid">
+        <p>let's see your taste</p>
+        <form>
+          <input id="bookname" type="text" placeholder="book name" required>
+          <input id="authorname" type="text" placeholder="author" required>
+          <input id="pages" type="number" placeholder="no. pages">
+          <label for="isread">Did u read it?</label>
+          <input type="checkbox" name="isread" id="isread" checked>
+          <div class="buttons">
+            <button type="submit" formmethod="dialog" class="mbutton" id="closebutton">Close</button>
+            <button type="submit" class="mbutton" id="addbuttonform">Add</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+    <div class="bookgrid">
+
+    </div>
+  </main>
+  <footer>
+    <p class="topfooter">Made for The Odin Project @fanofrisoni</p>
+  </footer>
+</body>
+</html>

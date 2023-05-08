@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg , #71d4c467, #c2beff80);
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  box-shadow: 5px 5px 20px #c2beff;
+}
+main {
+  height: 72vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button {
+  text-transform: lowercase;
+  align-self: flex-end;
+  margin-top: 12px;
+  margin-right: 30px;
+  padding:25px 40px;
+  font-size: 25px;
+  text-decoration: none;
+  color: #17171a;
+  user-select: none;
+}
+.button:hover {
+  transform: scale(1.05);
+  transition: 0.12s ease-in-out;
+  color: #434070;
+}
+.button:active {
+  transform: scale(0.98);
+  transition: 0.1s ease;
+  color: #c2beff;
+}
+footer {
+  height: 8vh;
+  width: 100%;
+  background-color: rgb(44, 51, 54);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topfooter {
+  text-transform: lowercase;
+  z-index: 2;
+  font-size: 23px;
+  color: rgb(235, 241, 255);
+  text-align: center;
+}
+h1 {
+  text-transform: lowercase;
+  font-size: 80px;
+  color: rgba(68, 47, 68, 0.849);
+  user-select: none;
+}
+
+.bookgrid {
+  width: 95%;
+  height: 78%;
+  display: grid;
+  background-color: #43407055;
+  box-shadow: 0 0 10px silver;
+}
+
+#modal {
+  position: fixed;
+  padding: 30px;
+  top:50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-size: 40px;
+  border: none;
+  border-radius: 10px;
+  color: whitesmoke;
+  background-color: #434070;
+  box-shadow: 0 0 10px #434070;
+}
+.modalgrid {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  gap: 10px;
+}
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+.mbutton {
+  flex: 1;
+  background-color: #747196;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font);
+  font-size: 25px;
+  color: white;
+}
+
+.mbutton:hover {
+  background-color: #7a74c0;
+  transition: 0.1s ease-in;
+}
+
+#addbuttonform {
+  background-color: #85bfe6;
+}
+
+#addbuttonform:hover {
+  background-color: #506a9b;
+  transition: 0.1s ease-in;
+}
+form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  font-size: 20px;
+}
+input {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+label {
+  grid-column-start: 1 span 2;
+  text-align: end;
+  align-self: center;
+}
+#bookname {
+  grid-column-start: span 3;
+}
