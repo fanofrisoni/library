@@ -16,24 +16,18 @@
     <a href="#" class="button" id="addbutton">
       <h2>+ Add New Book</h2>
     </a>
-    <dialog id="modal">
-      <div class="modalgrid">
-        <p>let's see your taste</p>
-        <form>
-          <input id="bookname" type="text" placeholder="book name" required>
-          <input id="authorname" type="text" placeholder="author" required>
-          <input id="pages" type="number" placeholder="no. pages">
-          <label for="isread">Did u read it?</label>
-          <input type="checkbox" name="isread" id="isread" checked>
-          <div class="buttons">
-            <button type="submit" formmethod="dialog" class="mbutton" id="closebutton">Close</button>
-            <button type="submit" class="mbutton" id="addbuttonform">Add</button>
-          </div>
-        </form>
-      </div>
+    <dialog id="modal" data-modal>
+      <p>let's see your taste</p>
+      <form method="dialog" id="newbook">
+        <input id="bookname" type="text" placeholder="book name" name="bookname" required>
+        <input id="authorname" type="text" placeholder="author" name="authorname" required>
+        <input id="pages" type="number" placeholder="no. pages" name="pages" required>
+        <label class="didu" for="isread">did u read it?</label>
+        <input type="checkbox" name="isread" id="isread" checked>
+        <button type="submit" class="mbutton" id="addbuttonform">Add</button>
+      </form>
     </dialog>
-    <div class="bookgrid">
-
+    <div id="bookgrid" class="bookgrid">
     </div>
   </main>
   <footer>

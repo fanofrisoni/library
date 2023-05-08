@@ -77,17 +77,21 @@ h1 {
 }
 
 .bookgrid {
+  padding: 10px;
   width: 95%;
   height: 78%;
   display: grid;
   background-color: #43407055;
   box-shadow: 0 0 10px silver;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-template-rows: 250px;
 }
 
 #modal {
   position: fixed;
   padding: 30px;
-  top:50%;
+  top:45%;
   left: 50%;
   translate: -50% -50%;
   font-size: 40px;
@@ -96,15 +100,6 @@ h1 {
   color: whitesmoke;
   background-color: #434070;
   box-shadow: 0 0 10px #434070;
-}
-.modalgrid {
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  gap: 10px;
-}
-.buttons {
-  display: flex;
-  gap: 15px;
 }
 .mbutton {
   flex: 1;
@@ -123,6 +118,7 @@ h1 {
 
 #addbuttonform {
   background-color: #85bfe6;
+  grid-column-start: span 2;
 }
 
 #addbuttonform:hover {
@@ -130,23 +126,53 @@ h1 {
   transition: 0.1s ease-in;
 }
 form {
+  padding-top: 15px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
   font-size: 20px;
 }
 input {
   font-size: 20px;
   padding: 8px;
   border-radius: 10px;
+
 }
 
-label {
-  grid-column-start: 1 span 2;
+.didu {
   text-align: end;
   align-self: center;
+  justify-self: center;
+  font-size: 25px;
+  user-select: none;
 }
-#bookname {
-  grid-column-start: span 3;
+#bookname, #authorname, #pages {
+  grid-column-start: span 2;
+}
+
+#modal > p {
+  user-select: none;
+}
+
+.book {
+  background-color: #8585a3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 20px;
+  user-select: none;
+}
+.book > h3 {
+  font-size: 32px;
+  flex: 1;
+}
+.book > button {
+  margin-top: 15px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #506a9b;
+  border-radius: 10px;
 }
