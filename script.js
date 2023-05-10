@@ -3,16 +3,26 @@ const modal = document.querySelector('#modal');
 var form = document.getElementById('newbook');
 
 let myLibrary = [];
-
-function Book (author, title, pages, read) {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor (author, title, pages, read) {
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+    this.read = read;
+  }
+  toggleReadd () {
+    this.read = !this.read;
+  }
 }
-Book.prototype.toggleReadd = function() {
-  this.read = !this.read;
-}
+// function Book (author, title, pages, read) {
+//   this.author = author;
+//   this.title = title;
+//   this.pages = pages;
+//   this.read = read;
+// }
+// Book.prototype.toggleReadd = function() {
+//   this.read = !this.read;
+// }
 function toggleRead(index) {
   myLibrary[index].toggleReadd();
   render();
@@ -25,10 +35,10 @@ function render () {
     let bookEl = document.createElement('div');
     bookEl.classList.add('book');
     bookEl.innerHTML = `<h3>${book.title}</h3>
-    <h4>${book.author}</h4>
-    <p>${book.pages} pages</p>
-    <button data-id="0" id="remove" onclick="removeBook(${i})">Remove</button>
-    <button onclick="toggleRead(${i})">${book.read ? 'Read' : 'Not Read'}</button>`
+                        <h4>${book.author}</h4>
+                        <p>${book.pages} pages</p>
+                        <button data-id="0" id="remove" onclick="removeBook(${i})">Remove</button>
+                        <button onclick="toggleRead(${i})">${book.read ? 'Read' : 'Not Read'}</button>`
     bookgrid.appendChild(bookEl);
   }
 }
